@@ -36,7 +36,7 @@ public class TakeScreenshot {
 		executor.executeScript("window.scrollTo(0,500)");
 		Thread.sleep(400);
 		File source = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
-		File target = new File("C:\\Users\\TRUE GRIT\\Desktop\\Infosys\\Assignment\\Selenium start\\Selenium1\\src\\test\\resources\\TakeSS\\screen.jpg");
+		File target = new File("C:\\Users\\TRUE GRIT\\Desktop\\Infosys\\Assignment\\Selenium Final\\SeleniumAssignments\\src\\test\\resources\\TakeSS\\screen.jpg");
 		Files.copy(source, target);
 		
 	}
