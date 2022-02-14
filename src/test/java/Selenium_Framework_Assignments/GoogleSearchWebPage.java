@@ -1,9 +1,9 @@
 package Selenium_Framework_Assignments;
 
 import java.util.List;
-import org.junit.After;
-import org.junit.Before;
-import org.junit.Test;
+import org.testng.annotations.AfterMethod;
+import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.Test;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -15,7 +15,7 @@ public class GoogleSearchWebPage {
 	WebDriver driver;
 	String url = "https://www.google.com";
 
-	@Before
+	@BeforeMethod
 	public void setUp() throws Exception {
 
 		System.setProperty("webdriver.chrome.driver",
@@ -48,7 +48,7 @@ public class GoogleSearchWebPage {
 		Thread.sleep(4000);
 	}
 
-	@After
+	@AfterMethod
 	public void tearDown() throws Exception {
 
 		Thread.sleep(4000);

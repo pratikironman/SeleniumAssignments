@@ -2,14 +2,14 @@ package Selenium_Framework_Assignments;
 
 import java.io.File;
 
-import org.junit.After;
-import org.junit.Before;
-import org.junit.Test;
 import org.openqa.selenium.By;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.testng.annotations.AfterMethod;
+import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.Test;
 
 import com.google.common.io.Files;
 
@@ -18,7 +18,7 @@ public class bootstrapDropdown {
 	WebDriver driver;
 	String url = "C:\\Users\\TRUE GRIT\\Desktop\\Infosys\\Assignment\\Selenium Final\\SeleniumAssignments\\src\\test\\resources\\TestBootStrapDropDown.html";
 
-	@Before
+	@BeforeMethod
 	public void setUp() throws Exception {
 
 		System.setProperty("webdriver.chrome.driver",
@@ -64,7 +64,7 @@ public class bootstrapDropdown {
 
 	}
 
-	@After
+	@AfterMethod
 	public void tearDown() throws Exception {
 
 		Thread.sleep(400);

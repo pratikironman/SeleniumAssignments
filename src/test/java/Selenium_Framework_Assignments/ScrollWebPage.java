@@ -1,8 +1,8 @@
 package Selenium_Framework_Assignments;
 
-import org.junit.After;
-import org.junit.Before;
-import org.junit.Test;
+import org.testng.annotations.AfterMethod;
+import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.Test;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -13,7 +13,7 @@ public class ScrollWebPage {
 	// String url = "http://openclinic.sourceforge.net/openclinic/home/index.php";
 	String url = "http://demo.guru99.com/test/guru99home/";
 
-	@Before
+	@BeforeMethod
 	public void setUp() throws Exception {
 
 		System.setProperty("webdriver.chrome.driver",
@@ -42,7 +42,7 @@ public class ScrollWebPage {
 		executor.executeScript("window.scrollTo(500,0)");
 	}
 
-	@After
+	@AfterMethod
 	public void tearDown() throws Exception {
 
 		Thread.sleep(4000);

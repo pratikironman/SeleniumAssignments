@@ -6,17 +6,16 @@ import java.io.FileInputStream;
 import org.apache.poi.ss.usermodel.Sheet;
 import org.apache.poi.ss.usermodel.Workbook;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
-import org.junit.After;
-import org.junit.Before;
-import org.junit.Test;
-
+import org.testng.annotations.AfterMethod;
+import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.Test;
 public class ReadExcel {
 
 	Workbook workbook;
 	FileInputStream input;
 	Sheet sheet;
 
-	@Before
+	@BeforeMethod
 	public void getExcel() throws Exception {
 
 		input = new FileInputStream(new File(
@@ -48,7 +47,7 @@ public class ReadExcel {
 		}
 	}
 
-	@After
+	@AfterMethod
 	public void teardown() throws Exception {
 
 		workbook.close();

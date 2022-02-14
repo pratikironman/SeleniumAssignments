@@ -1,9 +1,9 @@
 package frameWorkParameterozation_Assertions;
 
 import java.io.File;
-import org.junit.After;
-import org.junit.Before;
-import org.junit.Test;
+import org.testng.annotations.AfterMethod;
+import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.Test;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
@@ -17,7 +17,7 @@ public class TakeScreenshot {
 	WebDriver driver;
 	String url = "https://www.facebook.com";
 
-	@Before
+	@BeforeMethod
 	public void setUp() throws Exception {
 
 		System.setProperty("webdriver.chrome.driver",
@@ -41,7 +41,7 @@ public class TakeScreenshot {
 		
 	}
 
-	@After
+	@AfterMethod
 	public void tearDown() throws Exception {
 
 		Thread.sleep(4000);

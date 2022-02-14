@@ -1,9 +1,9 @@
 package frameWorkParameterozation_Assertions;
 
-import org.junit.After;
-import org.junit.Assert;
-import org.junit.Before;
-import org.junit.Test;
+import org.testng.Assert;
+import org.testng.annotations.AfterMethod;
+import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.Test;
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
@@ -16,7 +16,7 @@ public class SwitchTab {
 	WebDriver driver;
 	String url = "http://openclinic.sourceforge.net/openclinic/home/index.php";
 
-	@Before
+	@BeforeMethod
 	public void setUp() throws Exception {
 
 		System.setProperty("webdriver.chrome.driver",
@@ -58,7 +58,7 @@ public class SwitchTab {
 		System.out.println(urlNew);
 	}
 
-	@After
+	@AfterMethod
 	public void tearDown() throws Exception {
 
 		driver.quit();

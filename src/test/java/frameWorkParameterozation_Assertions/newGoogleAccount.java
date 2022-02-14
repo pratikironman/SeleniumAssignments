@@ -1,9 +1,9 @@
 package frameWorkParameterozation_Assertions;
 
-import org.junit.After;
-import org.junit.Assert;
-import org.junit.Before;
-import org.junit.Test;
+import org.testng.Assert;
+import org.testng.annotations.AfterMethod;
+import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.Test;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -15,7 +15,7 @@ public class newGoogleAccount {
 		String url = "https://accounts.google.com/signup";
 		
 		
-		@Before
+		@BeforeMethod
 		public void setUp()throws Exception{
 			
 			System.setProperty("webdriver.chrome.driver","C:\\Users\\TRUE GRIT\\Desktop\\Infosys\\Assignment\\chromedriver.exe");
@@ -86,7 +86,7 @@ public class newGoogleAccount {
 				}
 			
 		
-		@After
+		@AfterMethod
 		public void tearDown() throws Exception{
 				
 			Thread.sleep(2000);

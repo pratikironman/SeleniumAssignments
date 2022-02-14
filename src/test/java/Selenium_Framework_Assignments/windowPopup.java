@@ -1,9 +1,8 @@
 package Selenium_Framework_Assignments;
 
-
-import org.junit.After;
-import org.junit.Before;
-import org.junit.Test;
+import org.testng.annotations.AfterMethod;
+import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.Test;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 
@@ -13,7 +12,7 @@ public class windowPopup {
 	String url = "C:\\Users\\TRUE GRIT\\Desktop\\Infosys\\Assignment\\Selenium Final\\SeleniumAssignments\\src\\test\\resources\\TestPop-up.html";
 
 	
-	@Before
+	@BeforeMethod
 	public void setUp()throws Exception{
 
 	System.setProperty("webdriver.chrome.driver","C:\\Users\\TRUE GRIT\\Desktop\\Infosys\\Assignment\\chromedriver.exe");
@@ -42,7 +41,7 @@ public class windowPopup {
 		
 	}
 	
-	@After
+	@AfterMethod
 	public void tearDown()throws Exception{
 			
 			Thread.sleep(4000);

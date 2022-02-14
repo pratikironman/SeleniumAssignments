@@ -1,14 +1,12 @@
 package frameWorkParameterozation_Assertions;
 
-import java.util.concurrent.TimeUnit;
-
-import org.junit.After;
-import org.junit.Assert;
-import org.junit.Before;
-import org.junit.Test;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.testng.Assert;
 import org.testng.SkipException;
+import org.testng.annotations.AfterMethod;
+import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.Test;
 
 import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.ExtentTest;
@@ -22,7 +20,7 @@ public class ExtentReport {
 	public ExtentTest extentTest;
 	WebDriver driver;
 
-	@Before
+	@BeforeMethod
 	public void beforeClass() {
 		htmlReporter = new ExtentHtmlReporter("C:\\Users\\TRUE GRIT\\Desktop\\Infosys\\Assignment\\Selenium Final\\SeleniumAssignments\\src\\test\\resources\\reports\\extent.html");
 		htmlReporter.config().setEncoding("utf-8");
@@ -66,7 +64,7 @@ public class ExtentReport {
 		throw new SkipException("Excecuting Skipped Test Method");
 	}
 
-	@After
+	@AfterMethod
 	public void afterClass() {
 		driver.close();
 		driver.quit();
